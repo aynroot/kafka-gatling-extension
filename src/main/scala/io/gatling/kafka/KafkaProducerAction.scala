@@ -8,7 +8,7 @@ import io.gatling.core.stats.StatsEngine
 import io.gatling.core.stats.message.ResponseTimings
 import org.apache.avro.Schema
 
-class KafkaProducerAction[K, V](producerProtocol: KafkaProducerProtocol[K, V],
+class KafkaProducerAction(producerProtocol: KafkaProducerProtocol,
                           statsEngine: StatsEngine,
                           nextAction: Action, schema: Option[Schema] = None)
   extends ChainableAction {
